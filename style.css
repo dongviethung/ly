@@ -1,0 +1,456 @@
+
+*{
+   padding:0;
+   margin:0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   scroll-behavior: smooth;
+   font-family:Arial;
+   
+ }
+  :root{
+    background-color:#fff;
+    --text-color:#221314;
+    --second-color:#5a7184;
+    --main-color:#6e54fa;
+    --big-font:6rem;
+    --h2-font:3rem;
+    --p-font:1.1rem;
+}  
+/*--chinh thanh 2 ben*/
+  body{
+    background: var(background-color);
+	color: var(text-color);
+	background-image: url("HA LONG ẢNH BÌA.jpg") ;
+	background-repeat: no-repeat;
+}
+/*--chinh thanh hang*/
+  header{
+    position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+	background: trasnparent;
+	padding: 20px 18%;
+	transition: ease .40s;
+	background-color:steelblue;
+	color:white;
+}
+/*--chinh logo*/
+	.logo{
+	font-size:38px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: white;
+}
+/*--menu icon*/
+span {
+    position: absolute;
+    top: calc(30% - 25px);
+    left: calc(30% - 25px);
+    width: 3%;
+    height: 4px;
+    background-color: white;
+    display: block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+div span:nth-child(1) {
+    position: absolute;
+    top: calc(30% - 4px);
+}
+div span:nth-child(2) {
+    position: absolute;
+    top: calc(50% - 4px);
+	bottom:calc(50% - 4px);
+}
+div span:nth-child(3) {
+    position: absolute;
+    top: calc(70% - 4px);
+}
+div:hover span:nth-child(2) {
+    opacity: 0;
+}
+div:hover span:nth-child(1) ,
+div:hover span:nth-child(3) {
+    background-color: red;
+    top: calc(70% - 4px);
+    top: 35px;
+}
+div:hover span:nth-child(1) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg); 
+}
+div:hover span:last-child {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+/*--chinh thanh nav */
+    .navbar{
+	display:flex;
+}
+/*--chinh khung nav*/
+    .navbar a{
+	color:white;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 10px 22px;
+	border-radius: 4px;
+    transition: ease .40s;
+}
+	.navbar a:hover{
+	background-color:#f3fdfe;
+	color:#a4b3d4;
+	box-shadow: 5px 10px 30px rgb(75 75 75 / 15%);
+	border-radius: 4px;
+}
+/*--thêm chữ + bg*/
+   .home{
+   position: relative;
+   width:100%;
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+   display: grid;
+   grid-template-columns:repeat(1,1fs);
+   align-items: center;
+   padding:90px 18%;
+   margin-top:80px;
+   text-align:left;
+   }
+   /*--font chữ*/
+   .home-text h1{
+   font-size: 35px;
+   line-height:1.2;
+   color: var(bg-color);
+   font-family:'Patyone One', sans-serif;
+   letter-spacing: 4px;
+   margin-bottom: 10px;
+   padding-top:30px;
+   margin-top:120px;
+   text-align:left;
+   }
+   .home-text p {
+   color: black;
+   font-size: 20px;
+   font-weight: 400;
+   line-height:38px;
+   margin-bottom:10px;
+   text-align:left;
+   }
+/*--chỉnh thanh bấm*/
+   .home-btn{
+   display:inline-block;
+   font-size:16px;
+   padding:15px 30px;
+   background:#ffffffbf;
+   color: steelblue;
+   transition: ease .40s;
+   margin-top:5px;
+   }
+   .home-btn: hover{
+   background:var(bg-color);
+   transform: scale(1.1);
+   box-shadow: 5px 10px 30px rgb(75 75 75 / 15%);
+   border-radius:4px;
+   }
+/*--header*/
+   header.sticky{
+   background:var(background-color);
+   padding:10px 18%;
+   box-shadow: rgba(33,35,38, 0.1) 0px 10px 10px -10px;
+   }
+   sticky .logo{
+   color:white;
+   }
+   .sticky .navbar a{
+   color: white;
+   }
+   .text h2{
+   font-size:38px ;
+   line-height:1.1;
+   }
+/*--hình ảnh tiêu biểu*/
+   .title{
+	text-align: left;
+	float:left;
+	width:100%;
+	padding-top:10px;	
+}
+   .title h2{
+	font-size: 32px;
+	line-height: 1.2;
+	background-color:#9db6cf;
+	color:White;
+	text-align: center;
+}
+.package-content{
+	display:grid;
+	grid-template-columns: repeat(auto-fit,minmax(150px,auto));
+	grid-gap: 2rem;
+	align-items: center;
+	margin-top: 5rem;
+}
+.thum{
+	position: relative;
+	transition: all.3s cubic-bezier(.455,.05,.55,.95);
+	will-change: filter;
+	cursor: pointer;
+}
+.thum img{
+	width: 100%;
+	height: auto;
+}
+.thum h4{
+	position: absolute;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: right;
+	color: black;
+	background-color:#ede9e8;
+	top:36px;
+	right: 40px;
+}
+.dest-conten{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-top:24px;
+}
+.location h4{
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.location p{
+	font-size: 15px;
+	color: var(--second-color);
+}
+.thum:hover{
+	filter: brightness(100%) hue-rotate(45deg);
+	transform: scale(1.04);
+}
+.destination-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(340px,auto));
+	grid-gap: 2rem;
+	align-items: center;
+	margin-top: 5rem;
+}
+/*--chỉnh ảnh vehicles*/
+.vehicles h2{
+	text-align:center;
+	background-color:#9db6cf;
+    font-size:32px ;
+   line-height:1.1;
+   color: White;
+}
+   .row-items{
+   display:grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+   grid-gap: 2rem;
+   align-items:center;
+   text-align:center;
+   margin-top:10px;
+   }
+   .container-box{
+   background: white;
+   border: 1px solid #b6cade;
+   padding: 50px 10px;
+   border-radius:4px;
+   transition: all 1s ease 0s;
+   cursor: pointer;
+   }
+  /*--biểu tượng phương tiện*/
+   .container-ing img{
+   height:85px;
+   width:85px;
+   padding:15px;
+   background:white;
+   box-shadow: 5px 10px 30px rgb(85 85 85/20%);
+   border-radius: 4px;
+   margin-bottom:15px;
+   cursor: pointer;
+   }
+   /*--chữ trong khung*/
+   .container-box h4{
+   font-size:24px;
+   font-weight:600;
+   margin-bottom:8px;
+   }
+   .container-box h4{
+   font-size:15px;
+   color: black;
+   }
+   .container-box h4{
+	font-size: 24px;
+	font-weight: 600; 
+	margin-bottom: 8px;
+}
+.container-box p{
+	font-size: 15px;
+	color: black;
+}
+.container-box:hover{
+	box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
+	border: 1px solid transparent;
+	transform: translateY(-3px);
+}
+
+.col-content{
+	position: relative;
+}
+.col-content img{
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 15px;
+	filter: brightness(80%);
+	transition: all.3s cubic-bezier(.495,.05,.55,.95);
+	will-change: filter;
+}
+.col-content h5{
+	position: absolute;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--bg-color)
+	left: 15px;
+	bottom: 60px;
+}
+.col-content p{
+	position: absolute;
+	font-size: 15px;
+	color: var(--bg-color)
+	left: 15px;
+	bottom: 30px;
+	letter-spacing: 2px;
+}
+.col-content img:hover {
+	filter: brightness(100%) hue-rotate(45deg);
+	transform: scale(1.04);
+	cursor: pointer;
+}
+/*--Plan*/
+.plan{
+	color:black;
+	margin-bottom:10px;
+}
+.plan h2{
+	font-size: 32px;
+	line-height: 1.2;
+	background-color:#9db6cf;
+	color:White;
+	text-align: center;
+}
+.Explore h3{
+	background-color:#d4e4ed;
+	width:100%;
+}
+.Explore{
+	margin-left:10px;	
+}
+.Thrill h3{
+	background-color:#d4e4ed;
+	width:100%;
+}
+.Thrill{
+	margin-left:10px;	
+}
+.Relax h3{
+	background-color:#d4e4ed;
+	width:100%;
+}
+	.Relax {
+		margin-left:10px;	
+	}
+
+	/*--feedback*/
+.feedback{
+	padding:10px;
+	margin-top:20px;
+	background-color:white;
+	border-radius:4px;
+	box-shadow: 5px 10px 30px rgb(75 75 75 / 15%);
+}
+/*--footer*/
+.footer{
+background-color: steelblue;
+padding:20px 0px;
+text-align:center;
+font-size: 20px;
+margin-top:0px;
+color:white;
+}
+.footer-social-icon{
+	color:white;
+}
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.5% 0%;
+color:white;
+}
+
+.footer .row a{
+text-decoration:none;
+color:white;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:steelblue;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;	
+color:white;
+margin:0px 15px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+
+
+
+ 
+ 
